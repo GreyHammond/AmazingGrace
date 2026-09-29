@@ -1,4 +1,5 @@
-<title>Amazing Grace Outreach</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazing Grace Outreach | Jackson, Michigan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -619,6 +620,298 @@ footer {
 }
 
 :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
+
+/* =========================================================
+   AMAZING GRACE OUTREACH — VISUAL REDESIGN
+   Keeps the original content, links and embedded logo.
+   ========================================================= */
+:root {
+  --plum: #5a2a68;
+  --plum-deep: #32163f;
+  --plum-light: #8a5a98;
+  --gold: #c99b3b;
+  --gold-light: #efd28a;
+  --teal: #367b86;
+  --teal-light: #65aeb5;
+  --sand: #f7f1e8;
+  --warm-white: #fffdf9;
+  --text: #342b39;
+  --text-light: #685e6b;
+  --blush: #eadde9;
+  --surface: #ffffff;
+}
+
+body {
+  background: var(--warm-white);
+  font-weight: 400;
+}
+
+/* NAV: more substantial, less template-like */
+nav {
+  background: rgba(255,253,249,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(90,42,104,.12);
+  box-shadow: 0 4px 22px rgba(50,22,63,.06);
+}
+.nav-inner { padding: .75rem 1.5rem; }
+.nav-brand { font-size: 1.38rem; }
+.nav-brand-logo { width: 40px; height: 40px; }
+.nav-links { gap: 1.15rem; }
+.nav-links a { font-size: .76rem; font-weight: 700; }
+.nav-cta { box-shadow: 0 6px 18px rgba(90,42,104,.22); padding: .58rem 1.25rem; }
+
+/* HERO: strong visual hierarchy */
+.hero {
+  min-height: 78vh;
+  text-align: left;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 83% 35%, rgba(201,155,59,.22), transparent 22%),
+    radial-gradient(circle at 8% 80%, rgba(54,123,134,.12), transparent 25%),
+    linear-gradient(135deg, #efe6f1 0%, #dfd0e4 45%, #f7f1e8 100%);
+}
+.hero::before {
+  width: 52%; height: 90%; top: -25%; right: -10%;
+  background: radial-gradient(circle, rgba(201,155,59,.18) 0%, transparent 68%);
+}
+.hero::after { height: 80px; }
+.hero-content {
+  max-width: 1180px;
+  width: 100%;
+  padding: 5rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: minmax(230px, .75fr) minmax(0, 1.25fr);
+  grid-template-rows: auto auto auto auto auto;
+  column-gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+.hero-content::before {
+  content: 'JACKSON, MICHIGAN • COMMUNITY OUTREACH';
+  position: absolute;
+  top: 2.1rem; left: 1.5rem;
+  color: var(--teal);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+.hero-logo {
+  grid-column: 1;
+  grid-row: 1 / 6;
+  width: min(100%, 330px);
+  margin: 0 auto;
+  border: 8px solid rgba(255,255,255,.72);
+  box-shadow: 0 24px 60px rgba(50,22,63,.18), 0 0 0 1px rgba(90,42,104,.08);
+}
+.hero-title {
+  grid-column: 2; grid-row: 1;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  color: var(--plum-deep);
+  margin-bottom: .15rem;
+}
+.hero-subtitle {
+  grid-column: 2; grid-row: 2;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  color: var(--plum);
+  margin-bottom: .55rem;
+}
+.hero-tagline {
+  grid-column: 2; grid-row: 3;
+  font-family: 'Lato', sans-serif;
+  font-size: .9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--text-light);
+  margin-bottom: 1.4rem;
+}
+.hero-buttons { grid-column: 2; grid-row: 4; justify-content: flex-start; }
+
+/* Global sections */
+section { scroll-margin-top: 80px; }
+.section-inner { max-width: 1160px; }
+.section-label {
+  color: var(--teal);
+  font-weight: 800;
+  letter-spacing: .18em;
+  font-size: .7rem;
+}
+.section-heading {
+  color: var(--plum-deep);
+  font-size: clamp(2.25rem, 4vw, 3.45rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.section-intro { color: var(--text); }
+
+/* About */
+.about { padding: 7rem 1.5rem; background: var(--warm-white); }
+.about-grid { gap: clamp(3rem, 7vw, 7rem); }
+.about-grid > div:first-child { max-width: 680px; }
+.about-values { margin-top: 2.2rem; gap: .8rem; }
+.value-card {
+  background: var(--surface);
+  border: 1px solid rgba(90,42,104,.1);
+  border-radius: 16px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: 0 10px 28px rgba(50,22,63,.06);
+  transition: transform .2s, box-shadow .2s;
+}
+.value-card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(50,22,63,.10); }
+.value-card h4 { color: var(--plum); font-size: 1rem; }
+.about-image-card {
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.2rem;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background:
+    linear-gradient(145deg, rgba(50,22,63,.96), rgba(90,42,104,.88)),
+    var(--plum);
+  box-shadow: 0 24px 60px rgba(50,22,63,.18);
+}
+.about-image-card::before {
+  content: '✦';
+  position: absolute;
+  top: 1rem; right: 2rem;
+  font-size: 8rem;
+  line-height: 1;
+  color: rgba(239,210,138,.14);
+}
+.about-image-card::after {
+  content: 'PEOPLE • DIGNITY • CONNECTION • HOPE';
+  position: absolute;
+  top: 2rem; left: 2.2rem;
+  color: rgba(255,255,255,.62);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+.about-quote { position: relative; z-index: 2; color: #fff; font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.18; }
+.about-quote-attr { position: relative; z-index: 2; color: var(--gold-light); font-weight: 800; margin-top: 1rem; }
+
+/* Mission */
+.mission { padding: 7rem 1.5rem; background: var(--sand); }
+.mission-content { max-width: 920px; }
+.mission-content > p { font-size: 1.05rem; color: var(--text); }
+.bridge-list {
+  margin: 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.bridge-item {
+  border: 1px solid rgba(90,42,104,.1);
+  border-radius: 18px;
+  padding: 1.25rem 1.35rem;
+  background: rgba(255,255,255,.74);
+  box-shadow: 0 8px 24px rgba(50,22,63,.04);
+}
+.bridge-item:last-child { grid-column: 1 / -1; background: var(--plum); color: #fff; border-color: var(--plum); }
+.bridge-item:last-child p { color: #fff; }
+.bridge-marker { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--blush); color: var(--plum); font-weight: 900; flex: 0 0 auto; }
+.bridge-item:last-child .bridge-marker { background: var(--gold); color: var(--plum-deep); }
+
+/* Outreach model: turn it into a visual journey */
+.model { padding: 7rem 1.5rem; background: var(--plum-deep); color: #fff; position: relative; overflow: hidden; }
+.model::before { content: ''; position: absolute; width: 480px; height: 480px; border-radius: 50%; right: -180px; top: -180px; border: 1px solid rgba(239,210,138,.18); box-shadow: 0 0 0 80px rgba(239,210,138,.025), 0 0 0 160px rgba(239,210,138,.018); }
+.model .section-label { color: var(--gold-light); }
+.model .section-heading { color: #fff; }
+.model-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  align-items: center;
+  margin: 2.5rem 0 3.5rem;
+}
+.model-step { background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.16); color: #fff; border-radius: 999px; padding: .65rem 1rem; font-size: .84rem; font-weight: 800; }
+.model-step:last-child { background: var(--gold); border-color: var(--gold); color: var(--plum-deep); }
+.model-arrow { color: var(--gold-light); opacity: .8; }
+.model-content { max-width: 920px; }
+.model-content p { color: rgba(255,255,255,.82); font-size: 1.02rem; }
+.mission-callout { margin: 2.5rem 0; padding: 2rem 2.2rem; border-left: 4px solid var(--gold); background: rgba(255,255,255,.07); border-radius: 0 18px 18px 0; color: var(--gold-light); font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3vw, 2.4rem); font-style: italic; }
+
+/* Needs */
+.needs { padding: 7rem 1.5rem; background: var(--warm-white); }
+.needs-grid { grid-template-columns: repeat(4, 1fr); gap: .85rem; }
+.need-item { min-height: 125px; border-radius: 18px; border: 1px solid rgba(54,123,134,.14); background: linear-gradient(145deg,#fff,#f6fbfb); box-shadow: 0 8px 24px rgba(54,123,134,.06); transition: transform .2s; }
+.need-item:hover { transform: translateY(-3px); }
+.need-icon { font-size: 1.8rem; }
+.need-text { font-weight: 800; color: var(--text); }
+.needs-cta { margin-top: 2rem; }
+
+/* Coaches */
+.coaches { padding: 7rem 1.5rem; background: #f1e9f1; }
+.coaches-intro { max-width: 760px; margin-bottom: 2.5rem; }
+.coach-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.coach-card { border-radius: 18px; border: 1px solid rgba(90,42,104,.1); background: rgba(255,255,255,.78); padding: 1.4rem; box-shadow: 0 8px 24px rgba(50,22,63,.05); transition: transform .2s, box-shadow .2s; }
+.coach-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(50,22,63,.10); }
+.coach-emoji { font-size: 1.8rem; }
+.coach-role { color: var(--plum); font-weight: 900; font-size: 1rem; }
+
+/* Involvement: strong conversion area */
+.involved { padding: 7rem 1.5rem; background: var(--warm-white); }
+.involved .section-inner { max-width: 1050px; }
+.involved-cards { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.involved-card { border-radius: 24px; padding: 2rem; border: 1px solid rgba(90,42,104,.1); box-shadow: 0 12px 34px rgba(50,22,63,.07); }
+.involved-card:nth-child(1) { background: #fbf3df; }
+.involved-card:nth-child(2) { background: #eaf5f6; }
+.involved-card:nth-child(3) { background: #f0e7f1; }
+.involved-card h3 { font-size: 1.7rem; color: var(--plum-deep); }
+
+/* Partners */
+.partners { padding: 6rem 1.5rem; background: var(--teal); color: #fff; }
+.partners .section-label { color: var(--gold-light); }
+.partners .section-heading { color: #fff; }
+.partners .section-intro { color: rgba(255,255,255,.84); }
+.partner-list { gap: .65rem; }
+.partner-badge { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: #fff; border-radius: 999px; padding: .65rem 1rem; }
+.partner-badge .check { color: var(--gold-light); }
+
+/* Footer */
+footer { background: #24122d; }
+.footer-brand { color: #fff; }
+.footer-tagline { color: var(--gold-light); }
+.footer-heading { color: var(--gold-light); }
+.footer-links a { color: rgba(255,255,255,.72); }
+.footer-links a:hover { color: #fff; }
+.footer-church, .footer-bottom { color: rgba(255,255,255,.6); }
+.footer-bottom { border-top-color: rgba(255,255,255,.12); }
+.footer-bottom a { color: var(--gold-light); }
+
+/* Remove decorative dividers that made the page feel repetitive */
+.divider { height: 0; overflow: hidden; margin: 0; }
+
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; text-align: center; max-width: 760px; padding-top: 5.5rem; }
+  .hero-content::before { left: 50%; transform: translateX(-50%); width: 100%; white-space: nowrap; }
+  .hero-logo { grid-column: 1; grid-row: 1; width: min(58vw, 270px); margin-bottom: 1.2rem; }
+  .hero-title { grid-column: 1; grid-row: 2; }
+  .hero-subtitle { grid-column: 1; grid-row: 3; }
+  .hero-tagline { grid-column: 1; grid-row: 4; }
+  .hero-buttons { grid-column: 1; grid-row: 5; justify-content: center; }
+  .needs-grid { grid-template-columns: repeat(2,1fr); }
+  .coach-grid { grid-template-columns: repeat(2,1fr); }
+  .involved-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 650px) {
+  .hero { min-height: auto; }
+  .hero-content { padding: 5rem 1.1rem 4rem; }
+  .hero-content::before { font-size: .58rem; letter-spacing: .12em; }
+  .hero-logo { width: min(64vw, 240px); }
+  .about, .mission, .model, .needs, .coaches, .involved, .partners { padding-top: 5rem; padding-bottom: 5rem; }
+  .bridge-list { grid-template-columns: 1fr; }
+  .bridge-item:last-child { grid-column: auto; }
+  .model-flow { display: grid; grid-template-columns: 1fr; }
+  .model-arrow { display: none; }
+  .model-step { text-align: center; }
+  .needs-grid, .coach-grid { grid-template-columns: 1fr; }
+  .need-item { min-height: 90px; }
+}
+
 </style>
 
 <!-- NAV -->
