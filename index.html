@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amazing Grace Outreach | Jackson, Michigan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -912,6 +913,29 @@ footer { background: #24122d; }
   .need-item { min-height: 90px; }
 }
 
+
+/* ── FIVE DOLLAR FRIDAY ── */
+.fdf { background: linear-gradient(160deg, #32163f 0%, #5a2a68 60%, #6e3a80 100%); color: #fff; padding: 6rem 1.5rem; }
+.fdf .section-label { color: #efd28a; }
+.fdf .section-heading { color: #fff; }
+.fdf-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 3rem; align-items: start; margin-top: 2rem; }
+.fdf-flyer { display: block; border-radius: 18px; overflow: hidden; box-shadow: 0 18px 50px rgba(0,0,0,.35); border: 3px solid #c99b3b; }
+.fdf-flyer img { display: block; width: 100%; height: auto; }
+.fdf-flyer-note { font-size: .8rem; color: rgba(255,255,255,.7); text-align: center; margin-top: .6rem; }
+.fdf-lead { font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,.92); margin-bottom: 1rem; }
+.fdf-lead strong { color: #efd28a; }
+.fdf-tiers { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: .7rem; }
+.fdf-tiers li { display: flex; align-items: baseline; gap: 1rem; background: rgba(255,255,255,.08); border-left: 4px solid #c99b3b; border-radius: 10px; padding: .8rem 1.1rem; color: #fff; }
+.fdf-tiers .amt { font-size: 1.6rem; font-weight: 800; color: #efd28a; min-width: 3.2rem; }
+.fdf-dates { background: rgba(0,0,0,.18); border-radius: 14px; padding: 1.1rem 1.3rem; margin: 1.5rem 0; color: rgba(255,255,255,.9); }
+.fdf-dates h3 { color: #efd28a; font-size: 1.1rem; margin-bottom: .4rem; }
+.fdf-dates p { margin: .2rem 0; }
+.fdf-buttons { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem; }
+.fdf .btn-outline { color: #fff; border-color: #fff; }
+.fdf .btn-outline:hover { background: #fff; color: #5a2a68; }
+.fdf-thanks { font-size: .9rem; color: rgba(255,255,255,.75); margin-top: 1rem; font-style: italic; }
+.fdf-closer { font-family: 'Dancing Script', cursive; font-size: clamp(1.6rem, 4vw, 2.3rem); color: #efd28a; margin-top: 1.5rem; }
+@media (max-width: 900px) { .fdf-grid { grid-template-columns: 1fr; } .fdf-flyer-wrap { max-width: 480px; margin: 0 auto; } }
 </style>
 
 <!-- NAV -->
@@ -925,6 +949,7 @@ footer { background: #24122d; }
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
+      <li><a href="#five-dollar-friday">$5 Friday</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#mission">Mission</a></li>
       <li><a href="#needs">Needs</a></li>
@@ -945,6 +970,42 @@ footer { background: #24122d; }
     <div class="hero-buttons">
       <a href="#involved" class="btn btn-primary">Get Involved</a>
       <a href="#mission" class="btn btn-outline">Our Mission</a>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE DOLLAR FRIDAY -->
+<section class="fdf" id="five-dollar-friday">
+  <div class="section-inner">
+    <p class="section-label">Warmth for Winter Campaign</p>
+    <h2 class="section-heading">💜 Five Dollar Friday 💜</h2>
+    <div class="fdf-grid">
+      <div class="fdf-flyer-wrap">
+        <a class="fdf-flyer" href="images/five-dollar-friday-flyer.jpg" target="_blank" rel="noopener">
+          <img src="images/five-dollar-friday-flyer.jpg" alt="Five Dollar Friday flyer: Give just $5 every Friday to help Amazing Grace Outreach get ready for Warmth for Winter. $5 buys thermal socks and hand warmers, $15 a winter care kit, $54 a warm night inside. Give on Givebutter or Cash App $AmazingGraceJXN." loading="lazy" width="1102" height="1591">
+        </a>
+        <p class="fdf-flyer-note">Tap the flyer to view or save it full size.</p>
+      </div>
+      <div>
+        <p class="fdf-lead"><strong>Jackson, we need you!</strong> Give $5, tag 5 friends, and challenge them to match you. Businesses: take the challenge and challenge another business!</p>
+        <p class="fdf-lead">Every dollar goes toward supplies for our <strong>December 5th Warmth for Winter</strong> outreach giveaway: coats, thermals, socks, hand warmers, and winter care kits for our unhoused neighbors.</p>
+        <ul class="fdf-tiers">
+          <li><span class="amt">$5</span><span>thermal socks and hand warmers</span></li>
+          <li><span class="amt">$15</span><span>a winter care kit</span></li>
+          <li><span class="amt">$54</span><span>a warm night inside</span></li>
+        </ul>
+        <div class="fdf-dates">
+          <h3>Three Saturdays of Giving</h3>
+          <p><strong>Dec 5</strong> &mdash; Warmth for Winter Launch</p>
+          <p><strong>Dec 12 &amp; Dec 19</strong> &mdash; Camp Pop-Ups</p>
+        </div>
+        <div class="fdf-buttons">
+          <a href="https://givebutter.com/amazing-grace-outreach-jackson" class="btn btn-gold" target="_blank" rel="noopener">Give on Givebutter</a>
+          <a href="https://cash.app/$AmazingGraceJXN" class="btn btn-outline" target="_blank" rel="noopener">Cash App: $AmazingGraceJXN</a>
+        </div>
+        <p class="fdf-thanks">Givebutter takes card, Venmo, PayPal, and Cash App, all on one page. Every donor is thanked by name on our Facebook page.</p>
+        <p class="fdf-closer">Give 5. Tag 5. No one cold by Christmas.</p>
+      </div>
     </div>
   </div>
 </section>
