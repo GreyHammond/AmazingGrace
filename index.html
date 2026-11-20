@@ -936,6 +936,34 @@ footer { background: #24122d; }
 .fdf-thanks { font-size: .9rem; color: rgba(255,255,255,.75); margin-top: 1rem; font-style: italic; }
 .fdf-closer { font-family: 'Dancing Script', cursive; font-size: clamp(1.6rem, 4vw, 2.3rem); color: #efd28a; margin-top: 1.5rem; }
 @media (max-width: 900px) { .fdf-grid { grid-template-columns: 1fr; } .fdf-flyer-wrap { max-width: 480px; margin: 0 auto; } }
+
+/* ── DARK MODE FIXES ── */
+@media (prefers-color-scheme: dark) {
+:root:not([data-theme="light"]) .hero-title, :root:not([data-theme="light"]) .section-heading { color: #ecdcf7; }
+:root:not([data-theme="light"]) nav { background: rgba(21,15,31,.94); border-bottom-color: rgba(236,220,247,.1); }
+:root:not([data-theme="light"]) .bridge-item { background: #2a1d3a; border-color: rgba(236,220,247,.12); }
+:root:not([data-theme="light"]) .need-item { background: linear-gradient(145deg,#2a1d3a,#231830); border-color: rgba(236,220,247,.12); }
+:root:not([data-theme="light"]) .coaches { background: #1e1529; }
+:root:not([data-theme="light"]) .coach-card { background: #2a1d3a; border-color: rgba(236,220,247,.12); }
+:root:not([data-theme="light"]) .involved-card:nth-child(1) { background: #33281a; }
+:root:not([data-theme="light"]) .involved-card:nth-child(2) { background: #1a2e32; }
+:root:not([data-theme="light"]) .involved-card:nth-child(3) { background: #2e1f38; }
+:root:not([data-theme="light"]) .involved-card { border-color: rgba(236,220,247,.12); }
+:root:not([data-theme="light"]) .involved-card h3 { color: #ecdcf7; }
+:root:not([data-theme="light"]) .need-text, :root:not([data-theme="light"]) .coach-card p, :root:not([data-theme="light"]) .involved-card p, :root:not([data-theme="light"]) .bridge-item p { color: #e4dded; }
+}
+:root[data-theme="dark"] .hero-title, :root[data-theme="dark"] .section-heading { color: #ecdcf7; }
+:root[data-theme="dark"] nav { background: rgba(21,15,31,.94); border-bottom-color: rgba(236,220,247,.1); }
+:root[data-theme="dark"] .bridge-item { background: #2a1d3a; border-color: rgba(236,220,247,.12); }
+:root[data-theme="dark"] .need-item { background: linear-gradient(145deg,#2a1d3a,#231830); border-color: rgba(236,220,247,.12); }
+:root[data-theme="dark"] .coaches { background: #1e1529; }
+:root[data-theme="dark"] .coach-card { background: #2a1d3a; border-color: rgba(236,220,247,.12); }
+:root[data-theme="dark"] .involved-card:nth-child(1) { background: #33281a; }
+:root[data-theme="dark"] .involved-card:nth-child(2) { background: #1a2e32; }
+:root[data-theme="dark"] .involved-card:nth-child(3) { background: #2e1f38; }
+:root[data-theme="dark"] .involved-card { border-color: rgba(236,220,247,.12); }
+:root[data-theme="dark"] .involved-card h3 { color: #ecdcf7; }
+:root[data-theme="dark"] .need-text, :root[data-theme="dark"] .coach-card p, :root[data-theme="dark"] .involved-card p, :root[data-theme="dark"] .bridge-item p { color: #e4dded; }
 </style>
 
 <!-- NAV -->
